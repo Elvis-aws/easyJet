@@ -16,6 +16,8 @@ class IrelandPage:
         return h1_text
 
     def enter_text_in_search_field(self):
+        BaseClass.is_element_clickable(By.CSS_SELECTOR, self.__search_locator)
+        BaseClass.element_click(By.CSS_SELECTOR, self.__search_locator)
         BaseClass.set_text(By.CSS_SELECTOR, self.__search_locator, 'Best Live Casinos Sites”')
         BaseClass.is_element_clickable(By.CSS_SELECTOR, self.__dropdown_locator)
         BaseClass.element_click(By.CSS_SELECTOR, self.__dropdown_locator)

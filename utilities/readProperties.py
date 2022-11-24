@@ -16,3 +16,13 @@ class ReadConfig:
     def get_site_map_url():
         url = config.get('common info', 'siteMapURL')
         return url
+
+    @staticmethod
+    def get_browser_type():
+        browser_type = config.get('common info', 'browser_type')
+        return browser_type
+
+    @staticmethod
+    def get_headless():
+        headless = config.get('common info', 'headless')
+        return headless

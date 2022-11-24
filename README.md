@@ -24,3 +24,8 @@ Generating allure-report locally
 - install allure - https://docs.qameta.io/allure/#_installing_a_commandline
 - generate report - pytest -v -s --alluredir="rootdirectory/reports""
 - display report - allure serve rootdirectory/reports
+
+**********************
+Run Tests
+**********************
+- pytest -s -v -m "Regression"
