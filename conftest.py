@@ -1,3 +1,4 @@
+import allure
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -6,6 +7,7 @@ import pytest
 from configurations.context import Context
 from pytest import ExitCode
 from configurations.baseClass import BaseClass
+from allure_commons.types import AttachmentType
 
 
 @pytest.fixture(autouse=True)
@@ -19,7 +21,8 @@ def setup(request):
     test_name = request.node.name
 
     yield
-    if pytest.ExitCode.OK:
+    if not pytest.ExitCode.OK:
         BaseClass.take_screenshot(test_name)
+        allure.attach(driver.get_screenshot_as_png(), name=test_name, attachment_type=AttachmentType.PNG)
 
     driver.quit()

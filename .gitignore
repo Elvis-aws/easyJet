@@ -54,7 +54,7 @@ coverage.xml
 # Translations
 *.mo
 *.pot
-
+*.png
 # Django stuff:
 *.log
 local_settings.py
@@ -76,7 +76,8 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
+/screenshots
+/reports
 # IPython
 profile_default/
 ipython_config.py
