@@ -1,7 +1,6 @@
 from pageObjects.homePage import HomePage
 from pageObjects.irelandPage import IrelandPage
 from pageObjects.bestLiveCasinoSitsPage import BestLiveCasinoSitsPage
-from configurations.httpRequest import SiteMapRequest
 
 
 class TestGambling:

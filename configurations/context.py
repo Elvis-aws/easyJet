@@ -1,4 +1,4 @@
-class context(type):
+class Context(type):
 
     def content(cls):
         return {key: value for key, value in cls.__dict__.items()
