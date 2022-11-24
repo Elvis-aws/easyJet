@@ -10,8 +10,8 @@ log = logging.getLogger(__name__)
 class BaseClass:
 
     @staticmethod
-    def take_screenshot():
-        Context.driver.save_screenshot("image.png")
+    def take_screenshot(name):
+        Context.driver.save_screenshot(f'{name}.png')
 
     @staticmethod
     def find_elements(by, web_element):

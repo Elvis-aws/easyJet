@@ -1,10 +1,11 @@
 import requests
-from configurations import constant
+from utilities.readProperties import ReadConfig
 
 
 class SiteMapRequest:
 
     @staticmethod
     def get_sitemap_data():
-        response = requests.get(constant.siteMapURL)
+        url = ReadConfig.get_site_map_url()
+        response = requests.get(url)
         return response
