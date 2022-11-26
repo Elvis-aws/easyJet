@@ -24,5 +24,8 @@ class ReadConfig:
 
     @staticmethod
     def get_headless():
-        headless = config.get('common info', 'headless')
-        return headless
+        headless = config.get('common info', 'headless_browser')
+        if headless == 'True':
+            return True
+        else:
+            return False

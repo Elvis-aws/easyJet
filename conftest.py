@@ -17,7 +17,8 @@ from allure_commons.types import AttachmentType
 @pytest.fixture(autouse=True)
 def setup(request):
     options = Options()
-    options.headless = bool(ReadConfig.get_headless())
+    bool_object = ReadConfig.get_headless()
+    options.headless = bool_object
     browser_type = ReadConfig.get_browser_type()
     if browser_type == 'chrome':
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
@@ -34,7 +35,7 @@ def setup(request):
     test_name = request.node.name
 
     yield
-    if pytest.ExitCode.OK:
+    if not pytest.ExitCode.OK:
         BaseClass.take_screenshot(test_name)
         allure.attach(driver.get_screenshot_as_png(), name=test_name, attachment_type=AttachmentType.PNG)
 
