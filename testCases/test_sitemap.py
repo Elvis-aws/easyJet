@@ -11,4 +11,3 @@ class TestSiteMap:
         assert publication_date in results
         title = 'Who Will Headline the 2023 Glasto Festival?'
         assert title in results
-

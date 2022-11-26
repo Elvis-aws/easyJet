@@ -17,6 +17,7 @@ import os
 import glob
 from threading import Lock
 from utilities.customLogger import LogGeneration
+
 log = LogGeneration.loggen()
 
 
@@ -27,11 +28,11 @@ def setup(request):
         options = Options()
         bool_object = ReadConfig.get_headless()
         options.headless = bool_object
-        browser_type = ReadConfig.get_browser_type()
-        log.info(f'Opening {browser_type} browser')
-        if browser_type == 'chrome':
+        browser = ReadConfig.get_browser_type()
+        log.info(f'Opening {browser} browser')
+        if browser == 'chrome':
             driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-        elif browser_type == 'firefox':
+        elif browser == 'firefox':
             driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         else:
             driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
@@ -41,7 +42,7 @@ def setup(request):
         Context.driver = driver
         url = ReadConfig.get_application_url()
         Context.driver.get(url)
-        test_name = request.node.name # Get current test name
+        test_name = request.node.name  # Get current test name
         _dir = os.getcwd()
         log_dir = _dir.replace('testCases', 'screenshots/*')
 
@@ -61,7 +62,7 @@ def setup(request):
             allure.attach(driver.get_screenshot_as_png(), name=test_name, attachment_type=AttachmentType.PNG)
         lock.release()
         driver.quit()
-        log.info(f'Closing {browser_type} browser')
+        log.info(f'Closing {browser} browser')
     except Exception as error:
         log.error(error)
         raise error
