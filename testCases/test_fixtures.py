@@ -20,3 +20,7 @@ class TestGambling:
         self.premier_league_page.click_on_view_all_premier_league_fixtures_link()
         fixture = self.scores_and_fixtures_page.get_fixtures()
         assert tottenham in fixture[0]
+        assert tottenham in fixture[1]
+        assert tottenham in fixture[2]
+        assert tottenham in fixture[3]
+        assert tottenham in fixture[4]
