@@ -1,65 +1,8 @@
 [
-    [
-        "MONDAY 26TH DECEMBER",
-        "Brentford",
-        "12:30",
-        "Tottenham Hotspur",
-        "Crystal Palace",
-        "15:00",
-        "Fulham",
-        "Everton",
-        "15:00",
-        "Wolverhampton Wanderers",
-        "Leicester City",
-        "15:00",
-        "Newcastle United",
-        "Southampton",
-        "15:00",
-        "Brighton & Hove Albion",
-        "Aston Villa",
-        "17:30",
-        "Liverpool",
-        "Arsenal",
-        "20:00",
-        "West Ham United"
-    ],
-    [
-        "SUNDAY 1ST JANUARY",
-        "Tottenham Hotspur",
-        "14:00",
-        "Aston Villa",
-        "Nottingham Forest",
-        "16:30",
-        "Chelsea"
-    ],
-    [
-        "WEDNESDAY 4TH JANUARY",
-        "Southampton",
-        "19:30",
-        "Nottingham Forest",
-        "Leeds United",
-        "19:45",
-        "West Ham United",
-        "Aston Villa",
-        "20:00",
-        "Wolverhampton Wanderers",
-        "Crystal Palace",
-        "20:00",
-        "Tottenham Hotspur"
-    ],
-    [
-        "SUNDAY 15TH JANUARY",
-        "Newcastle United",
-        "14:00",
-        "Fulham",
-        "Tottenham Hotspur",
-        "16:30",
-        "Arsenal"
-    ],
-    [
-        "MONDAY 23RD JANUARY",
-        "Fulham",
-        "20:00",
-        "Tottenham Hotspur"
-    ]
+    "SUNDAY 1ST JANUARY: Tottenham Hotspur 14:00 Aston Villa",
+    "SUNDAY 15TH JANUARY: Tottenham Hotspur 16:30 Arsenal",
+    "SATURDAY 4TH FEBRUARY: Tottenham Hotspur 15:00 Manchester City",
+    "SATURDAY 18TH FEBRUARY: Tottenham Hotspur 15:00 West Ham United",
+    "SATURDAY 25TH FEBRUARY: Tottenham Hotspur 15:00 Chelsea",
+    "SATURDAY 11TH MARCH: Tottenham Hotspur 15:00 Nottingham Forest"
 ]
